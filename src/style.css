@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body::after {
+  content: "";
+  background-image: url("./todosbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#root {
+  font-family: "Hind Siliguri", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#root .container {
+  width: 60%;
+  border-radius: 0.5rem;
+}
+#root .container .todo-input {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+#root .container .todo-input .add {
+  margin-right: 5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+#root .container .todo-input .add,
+#root .container .todo-input .clear {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(45, 45, 171, 0.5);
+  padding: 0.35rem 0.5rem;
+}
+#root .container .todo-input .left {
+  margin: 0 auto;
+  color: white;
+  width: 40%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  background-color: rgba(62, 62, 95, 0.5);
+}

@@ -36,21 +36,23 @@ function App() {
         todoNameRef.current.value = null
     }
     function handleClearTodo() {
-        console.log('hello')
         const newTodos = todos.filter((todo) => !todo.complete)
         setTodos(newTodos)
     }
 
     return (
         <div className="container">
+            <div className="notebook-img"></div>
             <div className="todo-input">
-                <input className="input" ref={todoNameRef} type="text" />
-                <button onClick={handleAddTodo} className="add">
-                    Add
-                </button>
-                <button onClick={handleClearTodo} className="clear">
-                    Clear Completed
-                </button>
+                <div>
+                    <input className="input" ref={todoNameRef} type="text" />
+                    <button onClick={handleAddTodo} className="add">
+                        Add
+                    </button>
+                    <button onClick={handleClearTodo} className="clear">
+                        Clear Completed
+                    </button>
+                </div>
                 <div className="left">
                     {todos.filter((todo) => !todo.complete).length} Left todo
                 </div>

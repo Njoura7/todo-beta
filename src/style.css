@@ -59,6 +59,7 @@ body::after {
 }
 
 #root {
+  font-size: 1.5rem;
   font-family: "Hind Siliguri", sans-serif;
   height: 100%;
   width: 100%;
@@ -66,30 +67,47 @@ body::after {
   align-items: center;
   justify-content: center;
 }
-#root .container {
+
+.container {
   width: 60%;
-  border-radius: 0.5rem;
 }
-#root .container .todo-input {
-  text-align: center;
+.container .todo-input {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
 }
-#root .container .todo-input .add {
+.container .todo-input input {
+  background: rgba(202, 196, 196, 0.7);
+  width: 20rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: transparent;
+}
+.container .todo-input .add {
   margin-right: 5rem;
   margin-left: 0.5rem;
   margin-bottom: 1rem;
 }
-#root .container .todo-input .add,
-#root .container .todo-input .clear {
+.container .todo-input .add,
+.container .todo-input .clear {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bolder;
   color: white;
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
   background-color: rgba(45, 45, 171, 0.5);
-  padding: 0.35rem 0.5rem;
+  padding: 0.75rem;
 }
-#root .container .todo-input .left {
+.container .todo-input .add:hover,
+.container .todo-input .clear:hover {
+  color: rgba(45, 45, 171, 0.5);
+  background: white;
+}
+.container .todo-input .left {
   margin: 0 auto;
   color: white;
   width: 40%;

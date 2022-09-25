@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import ToggleImages from './ToggleImages'
+import React from 'react'
 
 import './style.css'
 
@@ -7,23 +6,17 @@ export default function Todo({ todo, toggleTodo }) {
     function handleTodoClick() {
         toggleTodo(todo.id)
     }
-    const [active, setActive] = useState(false)
 
-    const handleChangeActive = () => {
-        setActive((previousStar) => {
-            return !previousStar
-        })
-    }
     return (
         <>
-            <ToggleImages active={active} handleChangeActive={handleChangeActive} />
             <label>
                 <input
+                    className="check-task"
                     type="checkbox"
                     checked={todo.complete}
                     onChange={handleTodoClick}
                 />
-                {todo.name}
+                <span className="task-msg">{todo.name}</span>
             </label>
         </>
     )

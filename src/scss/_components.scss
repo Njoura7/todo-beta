@@ -1,9 +1,61 @@
-//? ToggleImages
-
-.active {
-    width: 30px;
+//? Todo
+.check-task {
+    display: block;
+    opacity: 0;
+    &:checked + .task-msg::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        left: 0;
+        top: 0;
+        position: absolute;
+        outline: 5px solid rgb(39, 144, 48);
+        background-image: url('./bookmark-gray.png');
+        background-size: cover;
+    }
+    &:checked + .task-msg::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        left: 0;
+        top: 0;
+        position: absolute;
+        // outline: 5px solid rgb(39, 144, 48);
+        background-image: url('./bookmark-colored.png');
+        background-size: cover;
+        transform: scale(1);
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+    &:not(:checked) + .task-msg::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        left: 0;
+        top: 0;
+        position: absolute;
+        // outline: 5px solid rgb(39, 144, 48);
+        background-image: url('./bookmark-colored.png');
+        background-size: cover;
+        transform: scale(0);
+        opacity: 0;
+    }
 }
-
-.inactive {
-    width: 30px;
+.task-msg {
+    position: relative;
+    padding-left: 1.65em;
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(15, 6, 51);
+    &::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        left: 0;
+        top: 0;
+        position: absolute;
+        outline: 2px solid #aaa;
+        background-image: url('./bookmark-gray.png');
+        background-size: cover;
+    }
 }

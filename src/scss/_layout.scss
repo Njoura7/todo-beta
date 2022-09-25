@@ -44,12 +44,13 @@ body {
 
         font-family: 'Montserrat', sans-serif;
 
-        input {
-            background: rgba(202, 196, 196, 0.7);
+        .input {
+            background: rgba(45, 45, 171, 0.15);
             width: 20rem;
             height: 3rem;
             font-size: 1.5rem;
-            border: transparent;
+            border: none;
+            border-radius: 0.35rem;
         }
 
         .add {

@@ -116,3 +116,11 @@ body::after {
   font-weight: bold;
   background-color: rgba(62, 62, 95, 0.5);
 }
+
+.active {
+  width: 30px;
+}
+
+.inactive {
+  width: 30px;
+}

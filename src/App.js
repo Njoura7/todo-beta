@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import TodoList from './TodoList'
+
 import { v4 as uuidv4 } from 'uuid'
 import './style.css'
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
@@ -45,7 +46,12 @@ function App() {
             <div className="notebook-img"></div>
             <div className="todo-input">
                 <div>
-                    <input className="input" ref={todoNameRef} type="text" />
+                    <input
+                        placeholder="enter your task"
+                        className="input"
+                        ref={todoNameRef}
+                        type="text"
+                    />
                     <button onClick={handleAddTodo} className="add">
                         Add
                     </button>
